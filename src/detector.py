@@ -23,16 +23,16 @@ if str(ROOT) not in sys.path:
 ROOT = Path(os.path.relpath(ROOT, Path.cwd()))  # relative path
 
 # import from yolov5 submodules
-from models.common import DetectMultiBackend
-from utils.general import (
+from yolov5.models.common import DetectMultiBackend
+from yolov5.utils.general import (
     check_img_size,
     check_requirements,
     non_max_suppression,
     scale_coords
 )
-from utils.plots import Annotator, colors
-from utils.torch_utils import select_device
-from utils.augmentations import letterbox
+from yolov5.utils.plots import Annotator, colors
+from yolov5.utils.torch_utils import select_device
+from yolov5.utils.augmentations import letterbox
 
 
 @torch.no_grad()

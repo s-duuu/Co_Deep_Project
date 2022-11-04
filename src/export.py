@@ -63,14 +63,14 @@ if str(ROOT) not in sys.path:
     sys.path.append(str(ROOT))  # add ROOT to PATH
 ROOT = Path(os.path.relpath(ROOT, Path.cwd()))  # relative
 
-from models.common import Conv
-from models.experimental import attempt_load
-from models.yolo import Detect
-from utils.activations import SiLU
-from utils.datasets import LoadImages
-from utils.general import (LOGGER, check_dataset, check_img_size, check_requirements, check_version, colorstr,
+from yolov5.models.common import Conv
+from yolov5.models.experimental import attempt_load
+from yolov5.models.yolo import Detect
+from yolov5.utils.activations import SiLU
+from yolov5.utils.datasets import LoadImages
+from yolov5.utils.general import (LOGGER, check_dataset, check_img_size, check_requirements, check_version, colorstr,
                            file_size, print_args, url2file)
-from utils.torch_utils import select_device
+from yolov5.utils.torch_utils import select_device
 
 
 def export_formats():
